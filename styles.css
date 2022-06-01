@@ -5,22 +5,25 @@
 }
 
 body{
-    background-color: black;
     font-size: 10px;
     display: flex;
+    flex-direction: column;
     flex:1;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    background-image:url("./img/wallpaper.jpg");
+    background-size: cover;
 }
 
 .clockContainer{
-    width: 30rem;
-    height: 30rem;
-    border: 2rem solid white;
+    width: 20rem;
+    height: 20rem;
+    border: 1rem solid whitesmoke;
     border-radius: 50%;
     position: relative;
     padding: 2rem;
+    background: rgba(160, 158, 158, 0.25);
 
 }
 
@@ -29,13 +32,53 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+    transform: translateY(-3px);
+   
     
 }
 
 .hand{
     width: 50%;
     height: 6px;
-    background: white;
+    background: whitesmoke;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all ;
+    transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+    
 }
+
+.second-hand{
+    height: 3px; 
+}
+
+.hour-hand{
+    width: 30%;
+    right: 50%;
+}
+
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weekday{
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+    color: #244076;
+    margin-top: 3rem;
+
+}
+.date{
+    display: flex;
+    font-size: 4rem;
+    color: #244076;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+
